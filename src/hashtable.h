@@ -1,34 +1,42 @@
 #ifndef HASHTABLE_H
 #define HASHTABLE_H
 
-typedef struct Date {
-    int day;
-    int month;
-    int year;
-} Date;
+#define TAM_HASH 1009
 
-typedef struct Product {
-    int id;
-    char name[50];
-    float price;
-    Date date;
-} Product;
+typedef struct Data {
+	int dia;
+	int mes;
+	int ano;
+} Data;
 
-typedef struct HashTableNode {
-    int key;
-    Product* value;
+typedef struct Produto {
+	int codigo;
+	char nome[100];
+	int quantidade;
+	float preco;
+	Data dataRegistro;
 
-    struct HashTableNode* next;
-} HashTableNode;
+	struct Produto *prox;
+} Produto;
 
-typedef struct HashTable {
-    int size;
-    HashTableNode** table;
-} HashTable;
+// Tabela Hash
+extern Produto *tabelaHash[TAM_HASH];
 
-void initHashTable(HashTable* hashTable, int size);
-void insert(HashTable* hashTable, int key, char* value);
-char* search(HashTable* hashTable, int key);
-int hashFunction(int key, int size);
+// Funções
+void inicializarHash();
+
+int hash(int codigo);
+
+void inserirProduto(Produto produto);
+
+Produto *buscarProduto(int codigo);
+
+int removerProduto(int codigo);
+
+void carregarProdutos(const char *nomeArquivo);
+
+void listarProdutos();
+
+void liberarHash();
 
 #endif

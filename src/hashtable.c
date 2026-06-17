@@ -1,26 +1,140 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "hashtable.h"
 
-int hashFunction(int key, int size) {
-    return key % size;
+Produto *tabelaHash[TAM_HASH];
+
+int hash(int codigo)
+{
+	return codigo % TAM_HASH;
 }
 
-void initHashTable(HashTable* hashTable, int size) {
-    hashTable->size = size;
-    hashTable->table = (HashTableNode**)malloc(size * sizeof(HashTableNode*));
-
-    for (int i = 0; i < size; i++) {
-        hashTable->table[i] = NULL;
-    }
+void inicializarHash()
+{
+	for (int i = 0; i < TAM_HASH; i++) {
+		tabelaHash[i] = NULL;
+	}
 }
 
-void insert(HashTable* hashTable, int key, char* value) {
-    int index = hashFunction(key, hashTable->size);
-    HashTableNode* newNode = (HashTableNode*)malloc(sizeof(HashTableNode));
-    
-    newNode->key = key;
-    newNode->value = strdup(value);
-    newNode->next = hashTable->table[index];
-    hashTable->table[index] = newNode;
+void inserirProduto(Produto produto)
+{
+	int indice = hash(produto.codigo);
+
+	Produto *novo = (Produto *)malloc(sizeof(Produto));
+
+	if (novo == NULL)
+		return;
+
+	*novo = produto;
+	novo->prox = tabelaHash[indice];
+
+	tabelaHash[indice] = novo;
+}
+
+Produto *buscarProduto(int codigo)
+{
+	int indice = hash(codigo);
+
+	Produto *aux = tabelaHash[indice];
+
+	while (aux != NULL) {
+		if (aux->codigo == codigo)
+			return aux;
+
+		aux = aux->prox;
+	}
+
+	return NULL;
+}
+
+int removerProduto(int codigo)
+{
+	int indice = hash(codigo);
+
+	Produto *atual = tabelaHash[indice];
+	Produto *anterior = NULL;
+
+	while (atual != NULL) {
+		if (atual->codigo == codigo) {
+			if (anterior == NULL)
+				tabelaHash[indice] = atual->prox;
+			else
+				anterior->prox = atual->prox;
+
+			free(atual);
+			return 1;
+		}
+
+		anterior = atual;
+		atual = atual->prox;
+	}
+
+	return 0;
+}
+
+void carregarProdutos(const char *nomeArquivo)
+{
+	FILE *fp = fopen(nomeArquivo, "r");
+
+	if (fp == NULL) {
+		printf("Erro ao abrir %s\n", nomeArquivo);
+		return;
+	}
+
+	Produto p;
+
+	while (fscanf(fp,
+		   "%d;%99[^;];%d;%f;%d;%d;%d",
+		   &p.codigo,
+		   p.nome,
+		   &p.quantidade,
+		   &p.preco,
+		   &p.dataRegistro.dia,
+		   &p.dataRegistro.mes,
+		   &p.dataRegistro.ano) == 7) {
+		inserirProduto(p);
+	}
+
+	fclose(fp);
+}
+
+void listarProdutos()
+{
+	for (int i = 0; i < TAM_HASH; i++) {
+		Produto *aux = tabelaHash[i];
+
+		while (aux != NULL) {
+			printf("Codigo: %d\n", aux->codigo);
+			printf("Nome: %s\n", aux->nome);
+			printf("Quantidade: %d\n", aux->quantidade);
+			printf("Preco: %.2f\n", aux->preco);
+			printf("Data: %02d/%02d/%04d\n",
+			    aux->dataRegistro.dia,
+			    aux->dataRegistro.mes,
+			    aux->dataRegistro.ano);
+
+			printf("---------------------\n");
+
+			aux = aux->prox;
+		}
+	}
+}
+
+void liberarHash()
+{
+	for (int i = 0; i < TAM_HASH; i++) {
+		Produto *aux = tabelaHash[i];
+
+		while (aux != NULL) {
+			Produto *temp = aux;
+
+			aux = aux->prox;
+
+			free(temp);
+		}
+
+		tabelaHash[i] = NULL;
+	}
 }
