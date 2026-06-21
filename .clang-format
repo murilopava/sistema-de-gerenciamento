@@ -28,7 +28,3 @@ AlignAfterOpenBracket: DontAlign
 KeepEmptyLinesAtTheStartOfBlocks: false
 
 SortIncludes: false
-
-BraceWrapping: AfterControlStatement: Always
-
-AllowShortIfStatementsOnASingleLine: Never
