@@ -1,12 +1,14 @@
 #include "raylib.h"
 #include "menu.h"
 #include "screen.h"
+#include "relatorios.h"
 
 int main(void)
 {
 	InitWindow(1200, 800, "Sistema");
 	SetTargetFPS(144);
 
+	Venda *raizBST = NULL;
 	Tela telaAtual = TELA_MENU;
 
 	while (!WindowShouldClose()) {
@@ -26,7 +28,7 @@ int main(void)
 			break;
 
 		case TELA_RELATORIOS:
-			// DesenharTelaRelatorios(&telaAtual);
+			DesenharTelaRelatorios(&telaAtual, raizBST);
 			break;
 
 		case TELA_CONSULTA:
@@ -37,6 +39,7 @@ int main(void)
 		EndDrawing();
 	}
 
+	liberarArvore(raizBST);
 	CloseWindow();
 	return 0;
 }
