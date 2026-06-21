@@ -78,28 +78,29 @@ int removerProduto(int codigo)
 
 void carregarProdutos(const char *nomeArquivo)
 {
-	FILE *fp = fopen(nomeArquivo, "r");
+    FILE *fp = fopen(nomeArquivo, "r");
 
-	if (fp == NULL) {
-		printf("Erro ao abrir %s\n", nomeArquivo);
-		return;
-	}
+    if (fp == NULL) {
+        printf("Erro ao abrir %s\n", nomeArquivo);
+        return;
+    }
 
-	Produto p;
+    Produto p;
 
-	while (fscanf(fp,
-		   "%d;%99[^;];%d;%f;%d;%d;%d",
-		   &p.codigo,
-		   p.nome,
-		   &p.quantidade,
-		   &p.preco,
-		   &p.dataRegistro.dia,
-		   &p.dataRegistro.mes,
-		   &p.dataRegistro.ano) == 7) {
-		inserirProduto(p);
-	}
+    while (fscanf(fp,
+           "%d;%99[^;];%f;%d;%d;%d;%d",
+           &p.codigo,
+           p.nome,
+           &p.preco,
+           &p.quantidade,
+           &p.dataRegistro.dia,
+           &p.dataRegistro.mes,
+           &p.dataRegistro.ano) == 7)
+    {
+        inserirProduto(p);
+    }
 
-	fclose(fp);
+    fclose(fp);
 }
 
 void listarProdutos()

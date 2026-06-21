@@ -1,0 +1,240 @@
+1;Arroz 5kg;25.90;50;21;06;2026
+2;Feijao 1kg;8.50;80;21;06;2026
+3;Acucar 1kg;4.99;100;21;06;2026
+4;Macarrao espaguete;3.75;120;21;06;2026
+5;Leite integral 1L;4.20;60;21;06;2026
+6;Cafe 500g;12.90;70;21;06;2026
+7;Oleo de soja 900ml;6.99;90;21;06;2026
+8;Sabao em po 1kg;15.00;40;21;06;2026
+9;Detergente neutro;2.50;200;21;06;2026
+10;Biscoito recheado;3.20;150;21;06;2026
+11;Refrigerante cola 2L;7.50;90;21;06;2026
+12;Farinha de trigo 1kg;5.80;70;21;06;2026
+13;Sal refinado 1kg;2.00;300;21;06;2026
+14;Margarina 500g;6.30;80;21;06;2026
+15;Queijo muçarela;18.90;40;21;06;2026
+16;Presunto fatiado;14.50;50;21;06;2026
+17;Carne moida bovina;32.00;30;21;06;2026
+18;Frango inteiro;12.00;60;21;06;2026
+19;Sabonete 90g;2.20;250;21;06;2026
+20;Shampoo 400ml;10.90;90;21;06;2026
+21;Arroz integral 1kg;6.50;80;21;06;2026
+22;Feijao preto 1kg;8.90;75;21;06;2026
+23;Feijao carioca 1kg;8.70;78;21;06;2026
+24;Acucar cristal 1kg;5.10;110;21;06;2026
+25;Acucar refinado 1kg;5.20;105;21;06;2026
+26;Macarrao penne;4.10;100;21;06;2026
+27;Macarrao parafuso;4.20;95;21;06;2026
+28;Leite desnatado 1L;4.30;65;21;06;2026
+29;Leite semidesnatado 1L;4.40;60;21;06;2026
+30;Cafe soluvel 200g;9.90;85;21;06;2026
+31;Cafe torrado 500g;13.50;70;21;06;2026
+32;Oleo de milho 900ml;7.20;88;21;06;2026
+33;Azeite de oliva 500ml;18.50;45;21;06;2026
+34;Farinha de mandioca 1kg;5.60;90;21;06;2026
+35;Farinha de milho 1kg;4.80;85;21;06;2026
+36;Manteiga 200g;9.50;60;21;06;2026
+37;Margarina light 500g;6.80;70;21;06;2026
+38;Queijo prato;19.50;35;21;06;2026
+39;Queijo parmesao;24.90;30;21;06;2026
+40;Presunto cozido;15.00;45;21;06;2026
+41;Carne bovina acem;29.90;40;21;06;2026
+42;Carne bovina patinho;38.90;35;21;06;2026
+43;Carne suina pernil;22.90;50;21;06;2026
+44;Frango peito;18.90;60;21;06;2026
+45;Frango coxa e sobrecoxa;14.90;70;21;06;2026
+46;Ovos 12 unidades;9.80;150;21;06;2026
+47;Refrigerante guarana 2L;7.90;85;21;06;2026
+48;Refrigerante laranja 2L;7.80;80;21;06;2026
+49;Agua mineral 1.5L;2.50;300;21;06;2026
+50;Agua com gas 1.5L;2.80;250;21;06;2026
+51;Biscoito maisena;3.40;140;21;06;2026
+52;Biscoito cream cracker;3.60;130;21;06;2026
+53;Chocolate ao leite;6.90;120;21;06;2026
+54;Chocolate meio amargo;7.50;110;21;06;2026
+55;Achocolatado 400g;7.80;100;21;06;2026
+56;Cereal matinal;9.50;90;21;06;2026
+57;Granola 500g;10.90;80;21;06;2026
+58;Iogurte natural 1L;8.90;70;21;06;2026
+59;Iogurte sabores 1L;9.20;75;21;06;2026
+60;Leite condensado;6.80;120;21;06;2026
+61;Creme de leite;4.50;140;21;06;2026
+62;Maionese 500g;7.20;110;21;06;2026
+63;Ketchup 400g;6.50;105;21;06;2026
+64;Mostarda 200g;4.80;100;21;06;2026
+65;Molho de tomate;2.80;180;21;06;2026
+66;Milho verde lata;3.20;160;21;06;2026
+67;Ervilha lata;3.10;150;21;06;2026
+68;Sardinha lata;4.90;130;21;06;2026
+69;Atum lata;8.90;90;21;06;2026
+70;Vinagre 750ml;3.50;140;21;06;2026
+71;Sabao liquido;12.90;60;21;06;2026
+72;Desinfetante;6.50;120;21;06;2026
+73;Agua sanitaria;4.20;110;21;06;2026
+74;Esponja de louca;1.50;300;21;06;2026
+75;Papel higienico 12 rolos;18.90;80;21;06;2026
+76;Papel toalha;4.90;140;21;06;2026
+77;Amaciante roupas;13.90;90;21;06;2026
+78;Alcool 70% 1L;7.50;120;21;06;2026
+79;Desodorante aerosol;9.90;130;21;06;2026
+80;Creme dental;4.80;200;21;06;2026
+81;Batata inglesa 1kg;5.50;180;21;06;2026
+82;Cebola 1kg;4.20;170;21;06;2026
+83;Alho 100g;3.90;160;21;06;2026
+84;Tomate 1kg;6.80;150;21;06;2026
+85;Cenoura 1kg;4.50;140;21;06;2026
+86;Banana prata 1kg;5.20;200;21;06;2026
+87;Maca 1kg;8.90;160;21;06;2026
+88;Laranja 1kg;4.90;180;21;06;2026
+89;Mamao 1kg;6.50;150;21;06;2026
+90;Abacaxi unidade;7.90;90;21;06;2026
+91;Uva 1kg;12.90;70;21;06;2026
+92;Manga 1kg;6.90;110;21;06;2026
+93;Melancia unidade;15.90;60;21;06;2026
+94;Pao de forma;6.90;120;21;06;2026
+95;Pao frances unidade;0.80;1000;21;06;2026
+96;Mortadela fatiada;5.90;140;21;06;2026
+97;Linguiça calabresa;24.90;60;21;06;2026
+98;Linguiça toscana;22.90;65;21;06;2026
+99;Pizza congelada;18.90;80;21;06;2026
+100;Sorvete 1L;19.90;90;21;06;2026
+101;Cerveja lata 350ml;4.50;300;21;06;2026
+102;Cerveja garrafa 600ml;6.90;250;21;06;2026
+103;Vinho tinto 750ml;29.90;70;21;06;2026
+104;Fermento em po;3.90;150;21;06;2026
+105;Trigo para kibe;6.20;110;21;06;2026
+106;Polvilho doce;4.90;120;21;06;2026
+107;Coco ralado;3.80;130;21;06;2026
+108;Gelatina;1.50;400;21;06;2026
+109;Pipoca milho;3.20;180;21;06;2026
+110;Chocolate granulado;4.50;150;21;06;2026
+111;Macarrao instantaneo;2.80;200;21;06;2026
+112;Sopa instantanea;3.50;170;21;06;2026
+113;Caldos tempero;2.90;160;21;06;2026
+114;Temperos completos;3.10;150;21;06;2026
+115;Ervas secas orégano;2.50;140;21;06;2026
+116;Pimenta do reino;3.20;130;21;06;2026
+117;Canela em po;3.80;120;21;06;2026
+118;Cravo da india;4.20;110;21;06;2026
+119;Cha camomila;5.90;100;21;06;2026
+120;Cha erva doce;5.80;90;21;06;2026
+121;Detergente lava louca;2.60;220;21;06;2026
+122;Saco de lixo 30L;6.90;180;21;06;2026
+123;Saco de lixo 50L;8.90;160;21;06;2026
+124;Pano de prato;3.90;140;21;06;2026
+125;Flanela limpeza;2.50;150;21;06;2026
+126;Vassoura;12.90;60;21;06;2026
+127;Rodo;9.90;70;21;06;2026
+128;Pá de lixo;4.90;90;21;06;2026
+129;Balde plastico;8.90;80;21;06;2026
+130;Lustra moveis;7.50;100;21;06;2026
+131;Shampoo anticaspa;12.90;85;21;06;2026
+132;Condicionador 400ml;12.50;80;21;06;2026
+133;Sabonete liquido;6.90;120;21;06;2026
+134;Hidratante corporal;14.90;70;21;06;2026
+135;Desodorante roll-on;8.90;110;21;06;2026
+136;Absorvente higiênico;6.90;140;21;06;2026
+137;Fralda descartavel;29.90;60;21;06;2026
+138;Algodao 50g;3.90;150;21;06;2026
+139;Fio dental;4.50;130;21;06;2026
+140;Enxaguante bucal;9.90;100;21;06;2026
+141;Arroz 1kg;6.50;120;03;01;2026
+142;Feijao preto 1kg;9.20;90;11;02;2026
+143;Feijao carioca 1kg;8.90;85;19;03;2026
+144;Acucar cristal 1kg;5.10;150;07;04;2026
+145;Acucar refinado 1kg;5.30;140;15;05;2026
+146;Macarrao espaguete;3.90;200;23;06;2026
+147;Macarrao penne;4.10;180;02;01;2026
+148;Leite integral 1L;4.50;160;10;02;2026
+149;Leite desnatado 1L;4.70;140;18;03;2026
+150;Cafe torrado 500g;13.50;80;26;04;2026
+151;Cafe soluvel 200g;9.90;95;04;05;2026
+152;Oleo de soja 900ml;7.20;110;12;06;2026
+153;Azeite de oliva 500ml;18.90;60;20;01;2026
+154;Sal refinado 1kg;2.10;300;28;02;2026
+155;Farinha de trigo 1kg;6.20;130;08;03;2026
+156;Farinha de mandioca 1kg;5.80;120;16;04;2026
+157;Margarina 500g;6.90;100;24;05;2026
+158;Manteiga 200g;9.80;75;02;06;2026
+159;Queijo muçarela 1kg;32.90;40;10;01;2026
+160;Queijo prato 1kg;34.50;35;18;02;2026
+161;Presunto fatiado 200g;7.90;90;26;03;2026
+162;Carne bovina acem 1kg;29.90;50;03;04;2026
+163;Carne bovina patinho 1kg;38.50;40;11;05;2026
+164;Frango inteiro;13.90;80;19;06;2026
+165;Peito de frango 1kg;18.90;70;27;01;2026
+166;Ovos 12 unidades;9.50;200;05;02;2026
+167;Refrigerante cola 2L;8.20;150;13;03;2026
+168;Refrigerante guarana 2L;7.90;140;21;04;2026
+169;Agua mineral 1.5L;2.50;300;29;05;2026
+170;Agua com gas 1.5L;2.90;250;06;06;2026
+171;Biscoito recheado chocolate;3.80;180;14;01;2026
+172;Biscoito maisena;3.50;170;22;02;2026
+173;Biscoito cream cracker;3.60;160;02;03;2026
+174;Chocolate ao leite 90g;6.90;140;10;04;2026
+175;Chocolate meio amargo 90g;7.50;130;18;05;2026
+176;Sardinha lata;4.90;120;26;06;2026
+177;Atum lata;8.90;100;03;01;2026
+178;Molho de tomate;2.80;200;11;02;2026
+179;Milho enlatado;3.20;180;19;03;2026
+180;Ervilha enlatada;3.10;170;27;04;2026
+181;Sabao em po 1kg;15.90;60;05;05;2026
+182;Sabao liquido 1L;12.90;70;13;06;2026
+183;Detergente neutro;2.70;300;21;01;2026
+184;Desinfetante lavanda;6.50;120;29;02;2026
+185;Agua sanitaria 1L;4.20;110;09;03;2026
+186;Esponja de cozinha;1.50;400;17;04;2026
+187;Papel higienico 12 rolos;18.90;80;25;05;2026
+188;Papel toalha;4.90;150;02;06;2026
+189;Shampoo 400ml;11.90;90;10;01;2026
+190;Condicionador 400ml;12.50;85;18;02;2026
+191;Sabonete 90g;2.30;500;26;03;2026
+192;Creme dental 90g;4.80;300;03;04;2026
+193;Desodorante aerosol;9.90;200;11;05;2026
+194;Absorvente;6.90;180;19;06;2026
+195;Amaciante roupas 2L;13.90;100;27;01;2026
+196;Alcool 70% 1L;7.50;150;05;02;2026
+197;Arroz integral 1kg;7.20;110;13;03;2026
+198;Granola 500g;10.90;90;21;04;2026
+199;Iogurte natural 1L;8.50;120;29;05;2026
+200;Iogurte sabores 1L;9.20;130;06;06;2026
+201;Pao de forma;6.90;140;14;01;2026
+202;Pao frances unidade;0.80;1000;22;02;2026
+203;Mortadela fatiada 200g;5.90;150;02;03;2026
+204;Linguiça calabresa 1kg;24.90;60;10;04;2026
+205;Linguiça toscana 1kg;22.90;70;18;05;2026
+206;Batata inglesa 1kg;5.50;200;26;06;2026
+207;Cebola 1kg;4.20;180;03;01;2026
+208;Alho 100g;3.90;160;11;02;2026
+209;Tomate 1kg;6.80;150;19;03;2026
+210;Cenoura 1kg;4.50;140;27;04;2026
+211;Banana prata 1kg;5.20;220;05;05;2026
+212;Maca 1kg;8.90;180;13;06;2026
+213;Laranja 1kg;4.90;200;21;01;2026
+214;Mamao 1kg;6.50;170;29;02;2026
+215;Abacaxi unidade;7.90;90;09;03;2026
+216;Uva 1kg;12.90;80;17;04;2026
+217;Manga 1kg;6.90;120;25;05;2026
+218;Melancia unidade;15.90;60;02;06;2026
+219;Melancia fatia;5.90;150;10;01;2026
+220;Cerveja lata 350ml;4.50;300;18;02;2026
+221;Cerveja garrafa 600ml;6.90;250;26;03;2026
+222;Vinho tinto 750ml;29.90;70;03;04;2026
+223;Vinagre 750ml;3.20;200;11;05;2026
+224;Achocolatado 400g;7.80;140;19;06;2026
+225;Cereal matinal 300g;9.50;120;27;01;2026
+226;Gelatina 30g;1.50;500;05;02;2026
+227;Fermento em po;3.90;160;13;03;2026
+228;Trigo para kibe 500g;6.20;110;21;04;2026
+229;Polvilho doce 500g;4.90;130;29;05;2026
+230;Coco ralado 100g;3.80;140;06;06;2026
+231;Leite condensado;6.90;180;14;01;2026
+232;Creme de leite;4.50;200;22;02;2026
+233;Maionese 500g;7.20;160;02;03;2026
+234;Ketchup 400g;6.50;150;10;04;2026
+235;Mostarda 200g;4.80;140;18;05;2026
+236;Pimenta molho;5.90;120;26;06;2026
+237;Cachorro quente pao;5.50;180;03;01;2026
+238;Hamburguer carne;12.90;120;11;02;2026
+239;Pizza congelada;18.90;90;19;03;2026
+240;Sorvete 1L;19.90;100;27;04;2026
