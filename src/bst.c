@@ -75,3 +75,43 @@ void liberarArvore(Venda *raiz)
 
 	free(raiz);
 }
+
+int contarNos(Venda *raiz)
+{
+	if (raiz == NULL)
+		return 0;
+	return 1 + contarNos(raiz->esq) + contarNos(raiz->dir);
+}
+
+void preencherArray(Venda *raiz, Venda *array, int *i)
+{
+	if (raiz == NULL)
+		return;
+
+	preencherArray(raiz->esq, array, i);
+
+	array[*i] = *raiz;
+	(*i)++;
+
+	preencherArray(raiz->dir, array, i);
+}
+
+Venda *emOrdemArray(Venda *raiz, int *tamanho)
+{
+	*tamanho = contarNos(raiz);
+
+	if (*tamanho == 0)
+		return NULL;
+
+	Venda *array = malloc(sizeof(Venda) * (*tamanho));
+
+	if (!array) {
+		*tamanho = 0;
+		return NULL;
+	}
+
+	int i = 0;
+	preencherArray(raiz, array, &i);
+
+	return array;
+}

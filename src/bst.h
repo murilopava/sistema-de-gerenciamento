@@ -29,4 +29,8 @@ void emOrdem(Venda *raiz);
 
 void liberarArvore(Venda *raiz);
 
+Venda *emOrdemArray(Venda *raiz, int *tamanho);
+
+int contarNos(Venda *raiz);
+
 #endif
