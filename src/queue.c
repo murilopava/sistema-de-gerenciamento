@@ -11,8 +11,9 @@ void enfileirar(Fila *f, Cliente c)
 {
 	Cliente *novo = (Cliente *)malloc(sizeof(Cliente));
 
-	if (!novo)
+	if (!novo) {
 		return;
+	}
 
 	*novo = c;
 	novo->prox = NULL;
@@ -32,16 +33,18 @@ Cliente desenfileirar(Fila *f)
 {
 	Cliente vazio = {"", 0, 0, 0};
 
-	if (f->inicio == NULL)
+	if (f->inicio == NULL) {
 		return vazio;
+	}
 
 	Cliente *temp = f->inicio;
 	Cliente c = *temp;
 
 	f->inicio = f->inicio->prox;
 
-	if (f->inicio == NULL)
+	if (f->inicio == NULL) {
 		f->fim = NULL;
+	}
 
 	free(temp);
 	f->tamanho--;
@@ -53,8 +56,9 @@ Cliente proximoCliente(Fila *f)
 {
 	Cliente vazio = {"", 0, 0, 0};
 
-	if (f->inicio == NULL)
+	if (f->inicio == NULL) {
 		return vazio;
+	}
 
 	return *(f->inicio);
 }
@@ -68,8 +72,9 @@ void carregarClientes(Fila *f, const char *arquivo)
 {
 	FILE *fp = fopen(arquivo, "r");
 
-	if (!fp)
+	if (!fp) {
 		return;
+	}
 
 	Cliente c;
 

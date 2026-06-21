@@ -24,8 +24,9 @@ void inserirProduto(Produto produto)
 
 	Produto *novo = (Produto *)malloc(sizeof(Produto));
 
-	if (novo == NULL)
+	if (novo == NULL) {
 		return;
+	}
 
 	*novo = produto;
 	novo->prox = tabelaHash[indice];
@@ -40,8 +41,9 @@ Produto *buscarProduto(int codigo)
 	Produto *aux = tabelaHash[indice];
 
 	while (aux != NULL) {
-		if (aux->codigo == codigo)
+		if (aux->codigo == codigo) {
 			return aux;
+		}
 
 		aux = aux->prox;
 	}
@@ -58,11 +60,11 @@ int removerProduto(int codigo)
 
 	while (atual != NULL) {
 		if (atual->codigo == codigo) {
-			if (anterior == NULL)
+			if (anterior == NULL) {
 				tabelaHash[indice] = atual->prox;
-			else
+			} else {
 				anterior->prox = atual->prox;
-
+			}
 			free(atual);
 			return 1;
 		}
