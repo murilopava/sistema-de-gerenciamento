@@ -1,45 +1,42 @@
 #include "quicksort.h"
 
-static void swap(int *a, int *b)
+static void swap(Venda *a, Venda *b)
 {
-    int t = *a;
-    *a = *b;
-    *b = t;
+	Venda temp = *a;
+
+	*a = *b;
+	*b = temp;
 }
 
-static int partition(int arr[], int low, int high)
+static int partition(Venda vendas[], int low, int high)
 {
-    int pivot = arr[high];
-    int i = low - 1;
+	float pivot = vendas[high].valor_total;
+	int i = low - 1;
 
-    for (int j = low; j < high; j++)
-    {
-        if (arr[j] < pivot)
-        {
-            i++;
-            swap(&arr[i], &arr[j]);
-        }
-    }
+	for (int j = low; j < high; j++) {
+		if (vendas[j].valor_total > pivot) {
+			i++;
+			swap(&vendas[i], &vendas[j]);
+		}
+	}
 
-    swap(&arr[i + 1], &arr[high]);
-    return i + 1;
+	swap(&vendas[i + 1], &vendas[high]);
+
+	return i + 1;
 }
 
-static void quickSortRec(int arr[], int low, int high)
+static void quickSortRec(Venda vendas[], int low, int high)
 {
-    if (low < high)
-    {
-        int pi = partition(arr, low, high);
+	if (low < high) {
+		int pi = partition(vendas, low, high);
 
-        quickSortRec(arr, low, pi - 1);
-        quickSortRec(arr, pi + 1, high);
-    }
+		quickSortRec(vendas, low, pi - 1);
+		quickSortRec(vendas, pi + 1, high);
+	}
 }
 
-void quicksort(int arr[], int length)
+void quicksort(Venda vendas[], int length)
 {
-    if (length > 1)
-    {
-        quickSortRec(arr, 0, length - 1);
-    }
+	if (length > 1)
+		quickSortRec(vendas, 0, length - 1);
 }
