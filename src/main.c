@@ -2,11 +2,13 @@
 #include "menu.h"
 #include "screen.h"
 #include "relatorios.h"
+#include "register.h"
 
 int main(void)
 {
 	InitWindow(1200, 800, "Sistema");
 	SetTargetFPS(144);
+	SetExitKey(0);
 
 	Venda *raizBST = NULL;
 	Tela telaAtual = TELA_MENU;
@@ -23,16 +25,16 @@ int main(void)
 			// DesenharTelaCaixa(&telaAtual);
 			break;
 
-		case TELA_PRODUTOS:
-			// DesenharTelaProdutos(&telaAtual);
-			break;
-
 		case TELA_RELATORIOS:
 			DesenharTelaRelatorios(&telaAtual, raizBST);
 			break;
 
 		case TELA_CONSULTA:
 			// DesenharTelaConsulta(&telaAtual);
+			break;
+
+		case TELA_CADASTRO:
+			DesenharTelaCadastro(&telaAtual);
 			break;
 		}
 

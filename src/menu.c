@@ -30,7 +30,7 @@ void DesenharMenu(Tela *telaAtual)
 	DrawText("MENU", 520, 80, 30, BLACK);
 
 	Botao caixa = {{450, 160, 300, 60}, "Caixa"};
-	Botao produtos = {{450, 240, 300, 60}, "Produtos"};
+	Botao cadastro = {{450, 240, 300, 60}, "Cadastro Produtos"};
 	Botao relatorios = {{450, 320, 300, 60}, "Relatorios"};
 	Botao consulta = {{450, 400, 300, 60}, "Consulta"};
 
@@ -38,8 +38,8 @@ void DesenharMenu(Tela *telaAtual)
 	if (BotaoClicado(caixa))
 		*telaAtual = TELA_CAIXA;
 
-	if (BotaoClicado(produtos))
-		*telaAtual = TELA_PRODUTOS;
+	if (BotaoClicado(cadastro))
+		*telaAtual = TELA_CADASTRO;
 
 	if (BotaoClicado(relatorios))
 		*telaAtual = TELA_RELATORIOS;
