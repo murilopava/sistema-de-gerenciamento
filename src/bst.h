@@ -1,9 +1,9 @@
 #ifndef BST_H
 #define BST_H
 
-#include "data.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "data.h"
 
 
 typedef struct Venda {
