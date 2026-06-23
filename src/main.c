@@ -3,6 +3,7 @@
 #include "screen.h"
 #include "relatorios.h"
 #include "register.h"
+#include "consulta.h"
 #include "teste.h"
 
 int main(void)
@@ -35,7 +36,7 @@ int main(void)
 			break;
 
 		case TELA_CONSULTA:
-			// DesenharTelaConsulta(&telaAtual);
+			DesenharTelaConsulta(&telaAtual, raizBST);
 			break;
 
 		case TELA_CADASTRO:
