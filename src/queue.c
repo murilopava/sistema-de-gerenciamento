@@ -84,9 +84,13 @@ void carregarClientes(Fila *f, const char *arquivo)
 	   O laço continua executando enquanto conseguir ler corretamente todos
 	   os dados de um cliente
 	*/
-	while (
-	    fscanf(fp, " %99[^;];%d;%d;%d", c.nome, &c.dia, &c.mes, &c.ano) ==
-	    4) {
+	while (fscanf(fp,
+		   " %d;%99[^;];%d;%d;%d",
+		   &c.id,
+		   c.nome,
+		   &c.dia,
+		   &c.mes,
+		   &c.ano) == 5) {
 		c.prox = NULL;
 		enfileirar(f, c);
 	}

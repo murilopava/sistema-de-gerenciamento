@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 typedef struct Cliente {
+	int id;
 	char nome[100];
 	int dia;
 	int mes;
