@@ -3,14 +3,19 @@
 #include "screen.h"
 #include "relatorios.h"
 #include "register.h"
+#include "teste.h"
 
 int main(void)
 {
 	InitWindow(1200, 800, "Sistema");
 	SetTargetFPS(144);
 	SetExitKey(0);
-
+	
 	Venda *raizBST = NULL;
+	
+	// teste provisorio para popular a arvore de vendas
+	raizBST = popularArvore(raizBST);
+	
 	Tela telaAtual = TELA_MENU;
 
 	while (!WindowShouldClose()) {
