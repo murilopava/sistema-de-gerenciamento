@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "relatorios.h"
-#include "mergesort.h"
+#include "quicksort.h"
 
 // Botão interno 
 
@@ -65,7 +65,7 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 			vetorVendas = emOrdemArray(raizBST, &tamanhoVetor);
 
 			if (vetorVendas != NULL && tamanhoVetor > 1)
-				mergeSort(vetorVendas, 0, tamanhoVetor - 1);
+				quicksort(vetorVendas, tamanhoVetor);
 
 			scrollOffset = 0;
 			modoAtual    = 1;
