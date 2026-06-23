@@ -31,7 +31,7 @@ void enfileirar(Fila *f, Cliente c)
 
 Cliente desenfileirar(Fila *f)
 {
-	Cliente vazio = {"", 0, 0, 0};
+	Cliente vazio = {0, "", 0, 0, 0};
 
 	if (f->inicio == NULL) {
 		return vazio;
