@@ -144,20 +144,4 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 		DrawText(buf, 750, y, 17, BLACK);
 	}
 
-	int fim = scrollOffset + linhasPorPagina;
-	if (fim > tamanhoVetor) fim = tamanhoVetor;
-
-	char info[64];
-	snprintf(info, sizeof(info), "Mostrando %d - %d de %d vendas",
-	    scrollOffset + 1, fim, tamanhoVetor);
-	DrawText(info, 350, 750, 16, GRAY);
-
-	BotaoRel btnCima  = {{220, 745, 60, 40}, "^"};
-	BotaoRel btnBaixo = {{290, 745, 60, 40}, "v"};
-
-	if (botaoClicado(btnCima) && scrollOffset > 0)
-		scrollOffset--;
-
-	if (botaoClicado(btnBaixo) && scrollOffset < maxScroll)
-		scrollOffset++;
 }
