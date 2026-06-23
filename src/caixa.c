@@ -20,19 +20,19 @@ static int inputLen;
 static bool campoFocado;
 static int proximoIdVenda = 1;
 
-static Rectangle btnVoltar         = { 30, 30, 100, 35 };
-static Rectangle btnChamarCliente  = { 30, 90, 220, 45 };
-static Rectangle campoBipe         = { 30, 220, 220, 40 };
-static Rectangle btnBipar          = { 30, 270, 220, 40 };
-static Rectangle btnDesfazer       = { 30, 470, 220, 45 };
-static Rectangle btnFinalizar      = { 30, 525, 220, 45 };
+static Rectangle btnVoltar = { 30, 30, 100, 35 };
+static Rectangle btnChamarCliente = { 30, 80, 220, 45 };
+static Rectangle campoBipe = { 30, 220, 220, 40 };
+static Rectangle btnBipar = { 30, 270, 220, 40 };
+static Rectangle btnDesfazer = { 30, 470, 220, 45 };
+static Rectangle btnFinalizar = { 30, 525, 220, 45 };
 
-int ObterClientesNaFila(void)
+int obterClientesNaFila(void)
 {
 	return tamanhoFila(&filaClientes);
 }
 
-static void ChamarProximoCliente(void) {
+static void chamarProximoCliente(void) {
     if (tamanhoFila(&filaClientes) == 0) {
         strcpy(clienteAtual, "Fila vazia");
         return;
@@ -41,8 +41,9 @@ static void ChamarProximoCliente(void) {
     strcpy(clienteAtual, c.nome);
 }
 
-static void BiparItem(void) {
+static void biparItem(void) {
     if (inputLen == 0) return;
+    if (strcmp(clienteAtual, "Nenhum cliente chamado") == 0) return;
 
     int codigo = atoi(inputCodigo);
     Produto *p = buscarProduto(codigo);
@@ -57,7 +58,7 @@ static void BiparItem(void) {
     inputLen = 0;
 }
 
-static void DesfazerUltimoItem(void) {
+static void desfazerUltimoItem(void) {
     Produto *p = desempilhar(&carrinho);
     if (p != NULL) {
         p->quantidade++;
@@ -65,7 +66,7 @@ static void DesfazerUltimoItem(void) {
     }
 }
 
-static void FinalizarVenda(Venda **raizBST) {
+static void finalizarVenda(Venda **raizBST) {
     if (pilhaVazia(&carrinho)) return;
 
     float total = 0.0f;
@@ -80,15 +81,11 @@ static void FinalizarVenda(Venda **raizBST) {
 
     *raizBST = inserir(*raizBST, proximoIdVenda++, total, hoje);
 
-    printf("--- Vendas na BST ---\n");
-    emOrdem(*raizBST);
-    printf("----------------------\n");
-
     totalCarrinho = 0.0f;
     strcpy(clienteAtual, "Nenhum cliente chamado");
 }
 
-void InicializarTelaCaixa(void) {
+void inicializarTelaCaixa(void) {
     inicializarHash();
     carregarProdutos("produtos.txt");
     inicializarPilha(&carrinho);
@@ -103,7 +100,7 @@ void InicializarTelaCaixa(void) {
     campoFocado = false;
 }
 
-void DesenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
+void desenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
 
     Vector2 mouse = GetMousePosition();
 
@@ -111,10 +108,10 @@ void DesenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
         campoFocado = CheckCollisionPointRec(mouse, campoBipe);
 
         if (CheckCollisionPointRec(mouse, btnVoltar))        *telaAtual = TELA_MENU;
-        if (CheckCollisionPointRec(mouse, btnChamarCliente)) ChamarProximoCliente();
-        if (CheckCollisionPointRec(mouse, btnBipar))         BiparItem();
-        if (CheckCollisionPointRec(mouse, btnDesfazer))      DesfazerUltimoItem();
-        if (CheckCollisionPointRec(mouse, btnFinalizar))     FinalizarVenda(raizBST);
+        if (CheckCollisionPointRec(mouse, btnChamarCliente)) chamarProximoCliente();
+        if (CheckCollisionPointRec(mouse, btnBipar))         biparItem();
+        if (CheckCollisionPointRec(mouse, btnDesfazer))      desfazerUltimoItem();
+        if (CheckCollisionPointRec(mouse, btnFinalizar))     finalizarVenda(raizBST);
     }
 
     if (campoFocado) {
@@ -129,7 +126,7 @@ void DesenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
         if (IsKeyPressed(KEY_BACKSPACE) && inputLen > 0) {
             inputCodigo[--inputLen] = '\0';
         }
-        if (IsKeyPressed(KEY_ENTER)) BiparItem();
+        if (IsKeyPressed(KEY_ENTER)) biparItem();
     }
 
     ClearBackground(RAYWHITE);
@@ -140,12 +137,12 @@ void DesenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
 
     DrawText("Frente de Caixa e Atendimento", 150, 35, 26, DARKGRAY);
 
-    DrawText("Cliente em atendimento:", 30, 75, 16, GRAY);
+    DrawText("Cliente em atendimento:", 30, 130, 16, GRAY);
     DrawText(clienteAtual, 30, 150, 20, BLACK);
 
     bool hoverChamar = CheckCollisionPointRec(mouse, btnChamarCliente);
     DrawRectangleRec(btnChamarCliente, hoverChamar ? LIGHTGRAY : GRAY);
-    DrawText("Chamar Próximo", 45, 102, 18, BLACK);
+    DrawText("Chamar Próximo", 45, 92, 18, BLACK);
 
     char filaInfo[32];
     snprintf(filaInfo, sizeof(filaInfo), "Na fila: %d clientes", tamanhoFila(&filaClientes));
@@ -187,7 +184,7 @@ void DesenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
     DrawText(totalTxt, 320, 525, 28, MAROON);
 }
 
-void LiberarTelaCaixa(void) {
+void liberarTelaCaixa(void) {
     liberarPilha(&carrinho);
     liberarFila(&filaClientes);
     liberarHash();

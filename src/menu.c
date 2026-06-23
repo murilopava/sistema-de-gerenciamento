@@ -37,7 +37,7 @@ void DesenharMenu(Tela *telaAtual)
 	// e a soma de todas as unidades em estoque 
 	char dashClientes[64];
 	char dashProdutos[64];
-	snprintf(dashClientes, sizeof(dashClientes), "Clientes aguardando na fila: %d", ObterClientesNaFila());
+	snprintf(dashClientes, sizeof(dashClientes), "Clientes aguardando na fila: %d", obterClientesNaFila());
 	snprintf(dashProdutos, sizeof(dashProdutos), "Produtos cadastrados no estoque: %d", contarProdutos());
 	DrawText(dashClientes, 380, 680, 18, DARKGRAY);
 	DrawText(dashProdutos, 380, 710, 18, DARKGRAY);

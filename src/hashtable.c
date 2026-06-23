@@ -107,20 +107,7 @@ void listarProdutos()
 	for (int i = 0; i < TAM_HASH; i++) {
 		Produto *aux = tabelaHash[i];
 
-		while (aux != NULL) {
-			printf("Codigo: %d\n", aux->codigo);
-			printf("Nome: %s\n", aux->nome);
-			printf("Quantidade: %d\n", aux->quantidade);
-			printf("Preco: %.2f\n", aux->preco);
-			printf("Data: %02d/%02d/%04d\n",
-			    aux->dataRegistro.dia,
-			    aux->dataRegistro.mes,
-			    aux->dataRegistro.ano);
-
-			printf("---------------------\n");
-
 			aux = aux->prox;
-		}
 	}
 }
 
