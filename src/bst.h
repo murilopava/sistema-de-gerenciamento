@@ -1,14 +1,10 @@
 #ifndef BST_H
 #define BST_H
 
+#include "data.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Data {
-	int dia;
-	int mes;
-	int ano;
-} Data;
 
 typedef struct Venda {
 	int id;

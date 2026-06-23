@@ -3,11 +3,7 @@
 
 #define TAM_HASH 1009
 
-typedef struct Data {
-	int dia;
-	int mes;
-	int ano;
-} Data;
+#include "data.h"
 
 typedef struct Produto {
 	int codigo;

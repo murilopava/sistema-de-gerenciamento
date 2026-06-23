@@ -5,6 +5,7 @@
 #include "register.h"
 #include "consulta.h"
 #include "teste.h"
+#include "caixa.h"
 
 int main(void)
 {
@@ -13,11 +14,12 @@ int main(void)
 	SetExitKey(0);
 	
 	Venda *raizBST = NULL;
-	
 	// teste provisorio para popular a arvore de vendas
 	raizBST = popularArvore(raizBST);
 	
 	Tela telaAtual = TELA_MENU;
+
+	InicializarTelaCaixa();
 
 	while (!WindowShouldClose()) {
 		BeginDrawing();
@@ -28,7 +30,7 @@ int main(void)
 			break;
 
 		case TELA_CAIXA:
-			// DesenharTelaCaixa(&telaAtual);
+			DesenharTelaCaixa(&telaAtual, &raizBST);
 			break;
 
 		case TELA_RELATORIOS:
@@ -47,6 +49,7 @@ int main(void)
 		EndDrawing();
 	}
 
+	LiberarTelaCaixa();
 	liberarArvore(raizBST);
 	CloseWindow();
 	return 0;
