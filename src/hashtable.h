@@ -34,5 +34,7 @@ void carregarProdutos(const char *nomeArquivo);
 void listarProdutos();
 
 void liberarHash();
+// soma a quantidade de todas as unidades em estoque para o dashboard do menu
+int  contarProdutos();
 
 #endif

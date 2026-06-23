@@ -124,6 +124,20 @@ void listarProdutos()
 	}
 }
 
+// soma a quantidade de todas as unidades em estoque para o dashboard do menu
+int contarProdutos()
+{
+	int total = 0;
+	for (int i = 0; i < TAM_HASH; i++) {
+		Produto *aux = tabelaHash[i];
+		while (aux != NULL) {
+			total += aux->quantidade;
+			aux = aux->prox;
+		}
+	}
+	return total;
+}
+
 void liberarHash()
 {
 	for (int i = 0; i < TAM_HASH; i++) {
