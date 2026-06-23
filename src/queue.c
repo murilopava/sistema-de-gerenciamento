@@ -70,6 +70,8 @@ int tamanhoFila(Fila *f)
 
 void carregarClientes(Fila *f, const char *arquivo)
 {
+	// abre o arquivo em modo leitura
+	// fp vai guardar o endereço do arquivo aberto
 	FILE *fp = fopen(arquivo, "r");
 
 	if (!fp) {
@@ -78,6 +80,10 @@ void carregarClientes(Fila *f, const char *arquivo)
 
 	Cliente c;
 
+	/*
+	   O laço continua executando enquanto conseguir ler corretamente todos
+	   os dados de um cliente
+	*/
 	while (
 	    fscanf(fp, " %99[^;];%d;%d;%d", c.nome, &c.dia, &c.mes, &c.ano) ==
 	    4) {

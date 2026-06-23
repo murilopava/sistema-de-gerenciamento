@@ -1,8 +1,8 @@
 #include "menu.h"
 
 typedef struct {
-	Rectangle rect;
-	const char *texto;
+	Rectangle rect; // posição e tamanho do botão
+	const char *texto; // texto exibido dentro do botão
 } Botao;
 
 static int BotaoClicado(Botao b)
