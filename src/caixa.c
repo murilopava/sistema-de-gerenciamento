@@ -107,11 +107,11 @@ void desenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         campoFocado = CheckCollisionPointRec(mouse, campoBipe);
 
-        if (CheckCollisionPointRec(mouse, btnVoltar))        *telaAtual = TELA_MENU;
+        if (CheckCollisionPointRec(mouse, btnVoltar)) *telaAtual = TELA_MENU;
         if (CheckCollisionPointRec(mouse, btnChamarCliente)) chamarProximoCliente();
-        if (CheckCollisionPointRec(mouse, btnBipar))         biparItem();
-        if (CheckCollisionPointRec(mouse, btnDesfazer))      desfazerUltimoItem();
-        if (CheckCollisionPointRec(mouse, btnFinalizar))     finalizarVenda(raizBST);
+        if (CheckCollisionPointRec(mouse, btnBipar)) biparItem();
+        if (CheckCollisionPointRec(mouse, btnDesfazer)) desfazerUltimoItem();
+        if (CheckCollisionPointRec(mouse, btnFinalizar)) finalizarVenda(raizBST);
     }
 
     if (campoFocado) {
@@ -172,7 +172,7 @@ void desenharTelaCaixa(Tela *telaAtual, Venda **raizBST) {
     Item *atual = carrinho.topo;
     while (atual != NULL) {
         char linha[150];
-        snprintf(linha, sizeof(linha), "%s  -  R$ %.2f", atual->produto->nome, atual->produto->preco);
+        snprintf(linha, sizeof(linha), "%s - R$ %.2f", atual->produto->nome, atual->produto->preco);
         Color cor = (atual == carrinho.topo) ? DARKBLUE : BLACK;
         DrawText(linha, 335, y, 18, cor);
         y += 30;

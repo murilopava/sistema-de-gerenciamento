@@ -51,7 +51,7 @@ void DesenharTelaConsulta(Tela *telaAtual, Venda *raizBST)
 
 	if (CheckCollisionPointRec(mouse, rBuscar) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 		int id = atoi(campoBusca);
-		resultado  = buscar(raizBST, id);
+		resultado = buscar(raizBST, id);
 		buscaFeita = 1;
 	}
 
@@ -69,7 +69,7 @@ void DesenharTelaConsulta(Tela *telaAtual, Venda *raizBST)
 			snprintf(buf, sizeof(buf), "Valor Total:  R$ %.2f", resultado->valor_total);
 			DrawText(buf, 330, 330, 20, DARKGREEN);
 
-			snprintf(buf, sizeof(buf), "Data:         %02d/%02d/%04d",
+			snprintf(buf, sizeof(buf), "Data: %02d/%02d/%04d",
 			    resultado->data.dia, resultado->data.mes, resultado->data.ano);
 			DrawText(buf, 330, 365, 20, BLACK);
 		} else {
@@ -85,8 +85,8 @@ void DesenharTelaConsulta(Tela *telaAtual, Venda *raizBST)
 
 	if (CheckCollisionPointRec(mouse, rVoltar) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
 		campoBusca[0] = 0;
-		resultado     = NULL;
-		buscaFeita    = 0;
-		*telaAtual    = TELA_MENU;
+		resultado = NULL;
+		buscaFeita = 0;
+		*telaAtual = TELA_MENU;
 	}
 }

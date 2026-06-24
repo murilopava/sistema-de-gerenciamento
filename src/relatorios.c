@@ -32,9 +32,9 @@ static int botaoClicado(BotaoRel b)
 void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 {
 	static Venda *vetorVendas = NULL;
-	static int tamanhoVetor   = 0;
-	static int modoAtual      = 0;
-	static int scrollOffset   = 0;
+	static int tamanhoVetor = 0;
+	static int modoAtual = 0;
+	static int scrollOffset = 0;
 
 	ClearBackground(RAYWHITE);
 
@@ -47,9 +47,9 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 			vetorVendas = NULL;
 			tamanhoVetor = 0;
 		}
-		modoAtual    = 0;
+		modoAtual = 0;
 		scrollOffset = 0;
-		*telaAtual   = TELA_MENU;
+		*telaAtual = TELA_MENU;
 	}
 
 	if (modoAtual == 0) {
@@ -68,7 +68,7 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 				quicksort(vetorVendas, tamanhoVetor);
 
 			scrollOffset = 0;
-			modoAtual    = 1;
+			modoAtual = 1;
 		}
 
 		if (botaoClicado(btnCronologico)) {
@@ -78,7 +78,7 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 			vetorVendas = emOrdemArray(raizBST, &tamanhoVetor);
 
 			scrollOffset = 0;
-			modoAtual    = 2;
+			modoAtual = 2;
 		}
 
 		return;
@@ -94,10 +94,10 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 	BotaoRel btnFechar = {{880, 745, 300, 40}, "Fechar Relatorio"};
 	if (botaoClicado(btnFechar)) {
 		free(vetorVendas);
-		vetorVendas  = NULL;
+		vetorVendas = NULL;
 		tamanhoVetor = 0;
 		scrollOffset = 0;
-		modoAtual    = 0;
+		modoAtual = 0;
 	}
 
 	if (tamanhoVetor == 0 || vetorVendas == NULL) {
@@ -109,7 +109,7 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 	scrollOffset -= wheel;
 
 	int linhasPorPagina = 17;
-	int maxScroll       = tamanhoVetor - linhasPorPagina;
+	int maxScroll = tamanhoVetor - linhasPorPagina;
 	if (maxScroll < 0) maxScroll = 0;
 	if (scrollOffset < 0) scrollOffset = 0;
 	if (scrollOffset > maxScroll) scrollOffset = maxScroll;
@@ -117,13 +117,13 @@ void DesenharTelaRelatorios(Tela *telaAtual, Venda *raizBST)
 	DrawRectangle(40, 115, 1120, 28, LIGHTGRAY);
 	DrawText("Pos.", 55,  120, 17, DARKGRAY);
 	DrawText("ID Venda", 160, 120, 17, DARKGRAY);
-	DrawText("Valor Total",  430, 120, 17, DARKGRAY);
-	DrawText("Data",         750, 120, 17, DARKGRAY);
+	DrawText("Valor Total", 430, 120, 17, DARKGRAY);
+	DrawText("Data", 750, 120, 17, DARKGRAY);
 
 	for (int i = 0; i < linhasPorPagina && (i + scrollOffset) < tamanhoVetor; i++) {
 		int idx = i + scrollOffset;
 		Venda v = vetorVendas[idx];
-		int y   = 148 + i * 33;
+		int y = 148 + i * 33;
 
 		Color fundo = (i % 2 == 0) ? (Color){245, 245, 245, 255} : RAYWHITE;
 		DrawRectangle(40, y - 3, 1120, 30, fundo);
